@@ -1,0 +1,2 @@
+"use strict";var cb=function(t,e){t.forEach((function(t){t.target.classList.toggle("animate__animated",t.isIntersecting),t.target.classList.toggle("animate__pulse",t.isIntersecting),t.isIntersecting&&e.unobserve(t.target)}))},options={root:null,threshold:0,rootMargin:"-150px"},animateSection=function(){var t=document.querySelectorAll("[data-js-section]"),e=new IntersectionObserver(cb,options);t.forEach((function(t){return e.observe(t)}))};"IntersectionObserver"in window&&animateSection();
+//# sourceMappingURL=../../sourcemaps/home/behaviors/animate.js.map

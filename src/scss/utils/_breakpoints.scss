@@ -1,0 +1,9 @@
+/// Creates mobile-first media queries 
+/// @group utilities
+/// @param {css identifier} $breakpoint - target breakpoint
+/// @output "@media" rule
+@mixin media-breakpoint-up( $breakpoint ) {
+    @media only screen and (min-width: $breakpoint) {
+        @content;
+    }
+}

@@ -1,0 +1,14 @@
+.back-btn {
+    background: transparent;
+
+    > .image {
+        background: #fbf5f9;
+        border: .01rem solid #cdcdcd;
+        border-radius: .3rem;
+        padding: .5rem .7rem;
+    }
+
+    > .text {
+        font-weight: bold;
+    }
+}

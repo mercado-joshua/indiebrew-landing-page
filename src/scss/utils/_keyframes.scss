@@ -1,0 +1,20 @@
+@use "sass:string";
+
+/// Creates css unique animation-name: value and their corresponding @keyframes rule.
+/// for more info: https://medium.com/@dtinth/declaring-a-css-animation-keyframes-directly-on-an-element-using-sass-f091a0a15dbd
+/// @group utilities
+/// @param {string} $animation-name - name of the animation
+/// @output "animation-name" and "@keyframes"
+@mixin animation-keyframes( $animation-name ) {
+    $animation-number: 0 !default !global;
+    $animation-number: $animation-number + 1 !global;
+    $name: string.unquote("#{ $animation-name }-#{ $animation-number }");
+
+    animation-name: $name;
+
+    @at-root {
+        @keyframes #{$name} {
+            @content;
+        }
+    }
+}

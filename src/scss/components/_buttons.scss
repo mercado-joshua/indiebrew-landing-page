@@ -1,0 +1,40 @@
+.open-btn,
+.close-btn,
+.cta-btn,
+.link-btn {
+    background: transparent;
+}
+
+.cta-btn {
+    background: #664efc;
+    color: #fff;
+    padding: 1rem;
+    border-radius: .3rem;
+    transition: 
+      background 250ms ease-in-out,
+      transform 150ms ease;
+
+    > .highlight {
+        opacity: .7;
+    }
+
+      &:hover,
+      &:focus {
+          background: #ebcbf7;
+          color: #000;
+      }
+
+      &:active {
+          transform: scale(.99);
+      }
+}
+
+.link-btn {
+    color: #664efc;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+        color: #ebcbf7;
+    }
+} 

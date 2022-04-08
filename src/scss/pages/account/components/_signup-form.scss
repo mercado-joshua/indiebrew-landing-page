@@ -1,0 +1,34 @@
+@use '../../../utils/breakpoints';
+
+.signup-form {
+    background: #fff;
+    padding: 1rem;
+    border-radius: .3rem;
+    box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.5);
+
+    > .title {
+        font-weight: bold;
+    }
+
+    > .input-control {
+        > label {
+            font-weight: bold;
+        }
+
+        > input {
+            padding: .5rem;
+            border-radius: .3rem;
+        }
+
+        > .description {
+            > .highlight {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // for large tablets and desktops
+    @include breakpoints.media-breakpoint-up( 768px ) {
+        padding: 2rem;
+    }
+}

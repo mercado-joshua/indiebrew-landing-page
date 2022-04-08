@@ -1,0 +1,75 @@
+@use '../../../utils/breakpoints';
+
+.form-section {
+    padding-bottom: 2rem;
+
+    .back-btn {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        > .text {
+            display: none;
+        }
+    }
+
+    .formbox {
+        > .contentbox {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            > .title {
+                font-weight: bold;
+                font-size: 1.7rem;
+            }
+        }
+
+        .feature-list {
+            gap: 1rem;
+
+            > .item {
+                display: flex;
+                align-items: baseline;
+                gap: 1rem;
+
+                > .description {
+                    > .highlight {
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        // for large tablets and desktops
+        @include breakpoints.media-breakpoint-up( 600px ) {
+            padding: 0 4rem;
+        }
+
+        // for large tablets and desktops
+        @include breakpoints.media-breakpoint-up( 768px ) {
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            align-items: center;
+        }
+    }
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    > .input-control {
+        display: flex;
+        flex-direction: column;
+
+        &:nth-child(4) {
+            flex-direction: row;
+            align-items: baseline;
+            gap: 1rem;
+        }
+    }
+}

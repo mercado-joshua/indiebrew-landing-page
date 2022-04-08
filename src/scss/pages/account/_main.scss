@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/// @name main.scss for account page
+/// @author Joshua Mercado
+///
+///  table of contents:
+///   1. layout
+///   2. components
+
+/// 2. layout - contains styles for different aspects of the
+///             site's structural layout.
+@forward "layouts/form-section";
+
+/// 3. components - "mini" layouts. Styles for small,
+///                  reusable pieces of the site.
+
+@forward "components/buttons";
+@forward "components/signup-form";
+

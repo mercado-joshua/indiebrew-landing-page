@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Indiebrew</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+
+    <!-- CDN -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="theme-color" content="#fafafa">
+</head>
+<body class="account-page">
+    <div class="form-section">
+        <div class="max-wrapper">
+            <header class="headerbox">
+                <img src="./images/Logo.svg" alt="" class="image">
+
+                <a href="./index.html">
+                    <button class="back-btn">
+                        <img src="./images/Back Arrow.svg" alt="" class="image"> 
+                        <span class="text">Back to Homepage</span>
+                    </button>
+                </a>
+            </header>
+            <!-- .headerbox ends -->
+
+            <div class="formbox">
+                <section class="contentbox">
+                    <h2 class="title">Create your personalized feed.</h2>
+
+                    <ul class="feature-list">
+                        <li class="item">
+                            <i class="icon fas fa-list"></i>
+                            <p class="description">
+                                <span class="highlight">Over 20 resources.</span> With resources ranging from Reddit to IndieHackers, We've got all your needs covered.
+                            </p>
+                        </li>
+
+                        <li class="item">
+                            <i class="icon fas fa-newspaper"></i>
+                            <p class="description">
+                                <span class="highlight">Delivered Weekly.</span> Every week at exactly Tuesday 12:00 P.M EST - expect a value-packed digest right in your email.
+                            </p>
+                        </li>
+
+                        <li class="item">
+                            <i class="icon fas fa-lightbulb"></i>
+                            <p class="description">
+                                <span class="highlight">Unlimited Ideas.</span> With all the ideas you'll be reading about, what's stopping you from creating a sustainable startup.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+
+                <div class="form">
+                    <form action="" class="signup-form" data-js-signup-form>
+                        <h3 class="title">Create your IndieBrew Account</h3>
+
+                        <div class="input-control">
+                            <label for="email">Email</label>
+                            <input 
+                                type="email" 
+                                name="email"
+                                placeholder="john@example.com"
+                                required
+                                data-js-email
+                            />
+                        </div>
+
+                        <div class="input-control">
+                            <label for="fullname">Full Name</label>
+                            <input 
+                                type="text" 
+                                name="fullname"
+                                placeholder="John Doe"
+                                pattern="[A-Za-z ]+"
+                                required
+                                data-js-fullname
+                            />
+                        </div>
+
+                        <div class="input-control">
+                            <label for="password">Password</label>
+                            <input 
+                                type="password" 
+                                name="password"
+                                minlength="8"
+                                placeholder="At least 8 characters" 
+                                required
+                                data-js-password
+                            />
+                        </div>
+
+                        <div class="input-control">
+                            <input type="checkbox" data-js-agree-btn/>
+                            <p class="description">By creating an account on IndieBrew, you agree to the <a href="#" class="highlight">Terms & Conditions</a></p>
+                        </div>
+
+                        <input class="cta-btn" type="submit" value="Create an Account">
+                    </form>
+                    <!-- .signup-form ends -->
+                </div>
+            </div>
+            <!-- .formbox ends -->
+        </div>
+    </div>
+    <!-- .form-section ends -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/polyfill.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/account/behaviors/signup-form.js"></script>
+</body>
+</html>

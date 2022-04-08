@@ -1,0 +1,52 @@
+@use '../utils/breakpoints';
+
+.footer-section {
+    background: #fdfcf9;
+    padding: 3rem 0;
+}
+
+.introbox > .title,
+.linkbox > .title {
+    font-weight: bold;
+}
+
+.footerbox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    
+    // for large phone and tablets
+    @include breakpoints.media-breakpoint-up( 600px ) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    // for large tablets and desktops
+    @include breakpoints.media-breakpoint-up( 992px ) {
+        grid-template-columns: 40% 1fr; 
+    }
+}
+
+.link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    // for large phone and tablets
+    @include breakpoints.media-breakpoint-up( 600px ) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    // for large tablets and desktops
+    @include breakpoints.media-breakpoint-up( 992px ) {
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 9rem)); 
+    }
+}
+
+.quicklinks {
+    > .item {
+        color: #6b6b6b;
+    }
+}

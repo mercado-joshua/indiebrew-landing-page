@@ -1,0 +1,45 @@
+@use '../utils/breakpoints';
+
+.menubar {
+    display: none;
+    background: #fdfcf9;
+    box-shadow: -14px 0px 20px 0px rgb(0 0 0 / 42%);
+
+    > .close-btn {
+        font-size: 1.7rem;
+    }
+
+    &.-active {
+        display: block;
+    }
+
+    
+    // for large phone and tablets
+    @include breakpoints.media-breakpoint-up( 600px ) {
+        all: unset;
+
+        > .close-btn {
+            display: none;
+        }
+    }
+}
+
+.primary-menu {
+    padding-top: 2rem;
+
+    > .item {
+        > .link {
+            color: #6b6b6b;
+            transition: .3s;
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+
+    // for large phone and tablets
+    @include breakpoints.media-breakpoint-up( 600px ) {
+        padding-top: 0;
+    }
+}
