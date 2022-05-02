@@ -273,6 +273,7 @@ a {
 .introbox > .title,
 .linkbox > .title {
   font-weight: bold;
+  font-size: 1.3rem;
 }
 
 .footerbox {
@@ -320,8 +321,8 @@ a {
 }
 @media only screen and (min-width: 992px) {
   .link-list {
-    grid-template-columns: repeat(auto-fit, minmax(-webkit-min-content, 9rem));
-    grid-template-columns: repeat(auto-fit, minmax(min-content, 9rem));
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
   }
 }
 

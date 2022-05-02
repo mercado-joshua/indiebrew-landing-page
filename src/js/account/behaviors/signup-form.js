@@ -17,7 +17,7 @@ const signupForm = () => {
         if ( email.validity.valueMissing ) {
             email.setCustomValidity('Enter your email address');
         }
-        else if( email.validity.typeMismatch ) {
+        else if ( email.validity.typeMismatch ) {
             email.setCustomValidity('Entered value needs to be an email address');
         }
     });
@@ -55,24 +55,16 @@ const signupForm = () => {
     form.addEventListener('submit', ( event ) => {
         event.preventDefault();
     
-        if ( !agreeBtn.checked ) {
+        if ( !agreeBtn.checked ) alert( 'Please indicate that you accept the Terms and Conditions' );
   
-            alert( 'Please indicate that you accept the Terms and Conditions' );
-        } else {
-            if ( !fullname.validity.valid && !email.validity.valid && !password.validity.valid ) {
-    
-                // show error code here ...
-            } else {
-                // submit data here ...
-            }
-        }
+        if ( !fullname.validity.valid && !email.validity.valid && !password.validity.valid ) alert( 'Please answer the form correctly' );
+
+        // if all is well, submit data here ...
     });
 };
 
-document.addEventListener('readystatechange', function (event) {
-    if (event.target.readyState === 'complete') {
-        signupForm();
-    }
+document.addEventListener('readystatechange', event => {
+    if (event.target.readyState === 'complete') signupForm();
 });
 
 
